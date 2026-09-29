@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "学习通",
+  "version": "1.10.0",
+  "description": "识别学习通章节内容类型，在空白页、视频页和 PPT/PDF 页执行自动滚动与下一节跳转。",
+  "permissions": [
+    "storage",
+    "scripting",
+    "webNavigation"
+  ],
+  "host_permissions": [
+    "http://mooc1.jjxy.zufe.edu.cn/*",
+    "https://mooc1.jjxy.zufe.edu.cn/*",
+    "http://pan-yz.chaoxing.com/*",
+    "https://pan-yz.chaoxing.com/*",
+    "https://api.deepseek.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://mooc1.jjxy.zufe.edu.cn/*",
+        "https://mooc1.jjxy.zufe.edu.cn/*",
+        "http://pan-yz.chaoxing.com/*",
+        "https://pan-yz.chaoxing.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

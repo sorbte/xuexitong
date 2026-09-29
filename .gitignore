@@ -1,0 +1,15 @@
+# Edge/Chrome packaged extension output
+*.crx
+*.pem
+
+# Local logs and editor files
+*.log
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# Node tooling, if added later
+node_modules/
+npm-debug.log*
